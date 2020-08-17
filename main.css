@@ -1,6 +1,11 @@
 .btn {
     border: 2px #000 solid;
     padding: 10px;
-    margin: 20px;
-    border-radius: 20%;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.numPanel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
