@@ -1,30 +1,30 @@
-// Addition a + b
-let add = (a, b) => {
-    if (typeof a !== 'number' || typeof b !== 'number')
-        throw 'Addition: need 2 number';
-    return a + b;
-};
+let allEquationBtn = document.querySelectorAll('.num, .sym');
+let display = document.querySelector('.display');
+let equalButton = document.getElementById('equalBtn');
+let allCleanButton = document.getElementById('allClean');
 
-// Subtraction a - b
-let sub = (a, b) => {
-    if (typeof a !== 'number' || typeof b !== 'number')
-        throw 'Subtraction: need 2 number';
-    return a - b;
-};
+display.isFinish = false;
 
-// Multiplication a * b
-let mul = (a, b) => {
-    if (typeof a !== 'number' || typeof b !== 'number')
-        throw 'Multiplication: need 2 number';
-    return a * b;
-};
+allEquationBtn.forEach((each) => {
+    each.addEventListener('click', () => {
+        if (display.isFinish) {
+            display.innerText = '';
+            display.isFinish = false;
+        }
+        display.innerText += event.target.innerText;
+        console.log(event.target.innerText);
+    });
+});
 
-// Division a / b
-let div = (a, b) => {
-    if (typeof a !== 'number' || typeof b !== 'number')
-        throw 'Division: need 2 number';
+equalButton.addEventListener('click', () => {
+    try {
+        display.innerText = mexp.eval(display.innerText);
+    } catch (e) {
+        console.log(e);
+    }
+    display.isFinish = true;
+});
 
-    if (b === 0) throw 'Division: Denominator cannot be 0';
-
-    return a / b;
-};
+allCleanButton.addEventListener('click', () => {
+    display.innerText = '';
+});
