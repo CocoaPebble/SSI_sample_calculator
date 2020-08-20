@@ -1,15 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .calculator {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
+    background: #111;
+    color: #fff;
     padding: 10px;
-    gap: 10px;
-    width: 40%;
+    width: 350px;
     margin: auto;
-    border: 1px #000 solid;
+    border-radius: 5%;
 }
 
 .display {
-    border: 1px #000 solid;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 60px;
+    height: 70px;
 }
 
 .panel {
@@ -24,11 +31,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222;
-    color: #fff;
     font-size: 30px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     padding: 10px;
+}
+
+#zero {
+    grid-column: 1 / span 2;
+    width: 150px;
+    border-radius: 60px;
+}
+
+.num {
+    background-color: #222;
+}
+
+.sym-row {
+    background-color: #ddd;
+    color: #111;
+}
+
+.sym-col {
+    background-color: rgb(240, 152, 37);
 }

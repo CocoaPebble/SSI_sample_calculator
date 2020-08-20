@@ -12,7 +12,6 @@ allEquationBtn.forEach((each) => {
             display.isFinish = false;
         }
         display.innerText += event.target.innerText;
-        console.log(event.target.innerText);
     });
 });
 
@@ -20,7 +19,7 @@ equalButton.addEventListener('click', () => {
     try {
         display.innerText = mexp.eval(display.innerText);
     } catch (e) {
-        console.log(e);
+        display.innerHTML = 'ERR';
     }
     display.isFinish = true;
 });
