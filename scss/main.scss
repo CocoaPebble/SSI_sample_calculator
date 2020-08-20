@@ -1,3 +1,6 @@
+$calculator-width: 400px;
+$calculator-height: $calculator-width * 1.5;
+
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,22 +12,29 @@
     background: #111;
     color: #fff;
     padding: 10px;
-    width: 350px;
+    width: $calculator-width;
+    height: $calculator-height;
     margin: auto;
     border-radius: 5%;
 }
 
-.display {
-    margin-bottom: 10px;
-    text-align: right;
-    font-size: 60px;
-    height: 70px;
+.display-container {
+    position: relative;
+    margin: 10px auto;
+    height: $calculator-height / 5;
+    // border: 1px #fff solid;
+    p {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        font-size: $calculator-height / 8;
+    }
 }
 
 .panel {
     display: grid;
     grid: repeat(5, 1fr) / repeat(4, 1fr);
-    gap: 5px;
+    gap: 10px;
     place-content: center;
     place-items: center;
 }
@@ -33,16 +43,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    width: 70px;
-    height: 70px;
+    font-size: $calculator-width / 5 / 2.5;
+    width: $calculator-width / 5;
+    height: $calculator-width / 5;
     border-radius: 50%;
     padding: 10px;
 }
 
 #zero {
     grid-column: 1 / span 2;
-    width: 150px;
+    width: $calculator-width / 2.5;
     border-radius: 60px;
 }
 
@@ -50,11 +60,11 @@
     background-color: #222;
 }
 
-.sym-row {
+.sym-1 {
     background-color: #ddd;
     color: #111;
 }
 
-.sym-col {
+.sym-2 {
     background-color: rgb(240, 152, 37);
 }

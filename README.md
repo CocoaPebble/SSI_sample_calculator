@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- [ ] HTML5 + CSS3 for the layout
-- [ ] JavaScirpt to realize the functions
+- [x] HTML5 + CSS3 for the layout
+- [x] JavaScirpt to realize the functions
 - [ ] Key-press events available
 - [x] OnClick events available
 - [x] Add event listeners with the event delegation pattern (optional)

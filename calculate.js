@@ -1,5 +1,5 @@
 let allEquationBtn = document.querySelectorAll('.num, .sym');
-let display = document.querySelector('.display');
+let display = document.querySelector('#display-text');
 let equalButton = document.getElementById('equalBtn');
 let allCleanButton = document.getElementById('allClean');
 
@@ -8,16 +8,17 @@ display.isFinish = false;
 allEquationBtn.forEach((each) => {
     each.addEventListener('click', () => {
         if (display.isFinish) {
-            display.innerText = '';
+            display.textContent = '';
             display.isFinish = false;
         }
-        display.innerText += event.target.innerText;
+        display.textContent += event.target.textContent;
+        console.log(display.textContent);
     });
 });
 
 equalButton.addEventListener('click', () => {
     try {
-        display.innerText = mexp.eval(display.innerText);
+        display.textContent = mexp.eval(display.textContent);
     } catch (e) {
         display.innerHTML = 'ERR';
     }
@@ -25,5 +26,9 @@ equalButton.addEventListener('click', () => {
 });
 
 allCleanButton.addEventListener('click', () => {
-    display.innerText = '';
+    display.textContent = '';
 });
+
+// display have size
+
+// change display font size to fix box size
