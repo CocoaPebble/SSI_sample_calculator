@@ -4,7 +4,7 @@
 
 - [x] HTML5 + CSS3 for the layout
 - [x] JavaScirpt to realize the functions
-- [ ] Key-press events available
+- [x] Key-press events available
 - [x] OnClick events available
 - [x] Add event listeners with the event delegation pattern (optional)
 

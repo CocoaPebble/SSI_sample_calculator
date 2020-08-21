@@ -20,7 +20,7 @@ $calculator-height: $calculator-width * 1.5;
 
 .display-container {
     position: relative;
-    margin: 10px auto;
+    margin: 10px 0;
     height: $calculator-height / 5;
     // border: 1px #fff solid;
     p {
@@ -48,9 +48,17 @@ $calculator-height: $calculator-width * 1.5;
     height: $calculator-width / 5;
     border-radius: 50%;
     padding: 10px;
+    &-1 {
+        background-color: #ddd;
+        color: #111;
+    }
+
+    &-2 {
+        background-color: rgb(240, 152, 37);
+    }
 }
 
-#zero {
+#num-0 {
     grid-column: 1 / span 2;
     width: $calculator-width / 2.5;
     border-radius: 60px;
@@ -58,13 +66,4 @@ $calculator-height: $calculator-width * 1.5;
 
 .num {
     background-color: #222;
-}
-
-.sym-1 {
-    background-color: #ddd;
-    color: #111;
-}
-
-.sym-2 {
-    background-color: rgb(240, 152, 37);
 }
