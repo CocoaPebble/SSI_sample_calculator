@@ -1,0 +1,24 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "apple style calculator demo",
+    "main": "calculate.js",
+    "dependencies": {},
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
+    },
+    "scripts": {
+        "clean": "rm -rf node_modules/",
+        "deploy": "gh-pages -d dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TyrangYang/SSI_sample_calculator.git"
+    },
+    "author": "Haolin Yang",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TyrangYang/SSI_sample_calculator/issues"
+    },
+    "homepage": "https://github.com/TyrangYang/SSI_sample_calculator#readme"
+}
